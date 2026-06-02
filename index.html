@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style/modern-normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/components/header.css" />
+    <link rel="stylesheet" href="./style/components/wrapper.css" />
+    <link rel="stylesheet" href="./style/components/home.css" />
+    <link rel="stylesheet" href="./style/components/about.css" />
+    <link rel="stylesheet" href="./style/components/languages.css" />
+    <link rel="stylesheet" href="./style/components/projects.css" />
+    <link rel="stylesheet" href="./style/components/contact.css" />
+    <link rel="stylesheet" href="./style/components/footer.css" />
+    <link rel="stylesheet" href="./style/utils.css" />
+    <title>Portfolio — Rafael Kataoka</title>
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
+    <script src="./src/scroll.js" defer></script>
+    <script src="./src/carousel.js" defer></script>
+    <script src="./src/contact.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+        />
+      </svg>
+    </button>
+
+    <header class="header container">
+      <h1 class="header__title">My Portfolio</h1>
+
+      <nav class="header__menu" id="headerMenu">
+        <a class="header__menu-link" href="#home">Home</a>
+        <a class="header__menu-link" href="#about">About</a>
+        <a class="header__menu-link" href="#languages">Skills</a>
+        <a class="header__menu-link" href="#projects">Projects</a>
+        <a class="header__menu-link" href="#contact">Contact</a>
+      </nav>
+
+      <button
+        class="header__hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main class="wrapper">
+      <section id="home" class="home container">
+        <img
+          class="home__img"
+          src="./public/128-1280406_view-user-icon-png-user-circle-icon-png.png"
+          alt="Rafael Kataoka"
+          width="1134"
+          height="1512"
+        />
+
+        <p class="home__name">Rafael Kataoka</p>
+
+        <h2 class="home__title">Software Engineer.</h2>
+
+        <p class="home__description">
+          Software engineer focused on back-end development, constantly evolving
+          and dedicated to building robust systems, efficient APIs, and scalable
+          solutions — with attention to performance, security, and best
+          practices.
+        </p>
+
+        <a class="home__btn btn" href="#contact">Reach Out</a>
+      </section>
+
+      <section id="about" class="about container hidden__scroll">
+        <div class="about__text-box">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            Hello, my name is Rafael de Morais Kataoka. I'm 20 years old, from
+            Londrina, Paraná, Brazil, and a
+            <strong>Software Engineering</strong> student at
+            <strong>UNIFIL (Centro Universitário Filadélfia)</strong>, based in
+            <strong>Londrina</strong>, with a focus on
+            <strong>back-end</strong> development. I work as a software engineer
+            in training, committed to building robust, scalable, and
+            well-structured solutions.<br /><br />
+
+            I have hands-on knowledge in <strong>Java</strong>,
+            <strong>JavaScript</strong>, <strong>TypeScript</strong>, and
+            <strong>SQL</strong>, along with experience using databases such as
+            <strong>MySQL</strong> and <strong>PostgreSQL</strong>. I also use
+            tools like <strong>Postman</strong> for API testing and validation,
+            following best practices for development and system integration.<br /><br />
+
+            I'm deeply interested in understanding how applications work under
+            the hood — from business logic to service communication and database
+            design. I'm always looking to grow through study, practice, and
+            solving real-world problems.<br /><br />
+
+            Currently, I'm deepening my knowledge in
+            <strong>.NET</strong> development and the
+            <strong>Azure</strong> cloud platform, focusing on building modern,
+            secure back-end applications ready for cloud environments.<br /><br />
+
+            I'm committed to building a strong foundation as a
+            <strong>back-end</strong> developer, continuously learning new
+            technologies and evolving as a software engineer.
+          </p>
+
+          <a
+            class="about__resume-link"
+            href="./public/curriculo.pdf"
+            download="Rafael_Kataoka_Resume.pdf"
+            aria-label="Download Resume"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.8"
+              stroke="currentColor"
+              class="about__resume-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+      </section>
+
+      <section id="languages" class="languages container hidden__scroll">
+        <div class="languages__group">
+          <h2 class="languages__title">
+            Technologies I Know (Basic to Intermediate)
+          </h2>
+          <div class="languages__grid">
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/226777.png"
+                alt="Java"
+              />
+              <h3 class="languages__box-title">Java</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/javascript--v2.png"
+                alt="JavaScript"
+              />
+              <h3 class="languages__box-title">JavaScript</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/ts.png"
+                alt="TypeScript"
+              />
+              <h3 class="languages__box-title">TypeScript</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/spring-boot.png"
+                alt="Spring Boot"
+              />
+              <h3 class="languages__box-title">SpringBoot</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/postgresql_plain_wordmark_logo_icon_146390.png"
+                alt="PostgreSQL"
+              />
+              <h3 class="languages__box-title">PostgreSQL</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/mysql-logo (1).png"
+                alt="MySQL"
+              />
+              <h3 class="languages__box-title">MySQL</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/postman.png"
+                alt="Postman"
+              />
+              <h3 class="languages__box-title">Postman</h3>
+            </div>
+
+            <div class="box">
+              <img class="languages__img" src="./public/html.png" alt="HTML" />
+              <h3 class="languages__box-title">HTML</h3>
+            </div>
+
+            <div class="box">
+              <img
+                class="languages__img"
+                src="./public/CSS3_logo.svg.png"
+                alt="CSS"
+              />
+              <h3 class="languages__box-title">CSS</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects container hidden__scroll">
+        <h2 class="projects__title">My Projects</h2>
+
+        <div class="projects__slider-wrapper">
+          <div class="projects__slider" id="projectsSlider">
+            <div class="projects__track" id="projectsTrack">
+              <div class="projects__box">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="projects__img-link"
+                >
+                  <img
+                    class="projects__img"
+                    src="./public/images.png"
+                    alt="Project 1"
+                  />
+                  <span class="projects__img-overlay">View Project ↗</span>
+                </a>
+                <div class="projects__box-text">
+                  <h2 class="projects__box-title">Project Name</h2>
+                  <p class="projects__box-description">
+                    Short description of the project, technologies used and what
+                    problem it solves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="projects__box">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="projects__img-link"
+                >
+                  <img
+                    class="projects__img"
+                    src="./public/images.png"
+                    alt="Project 2"
+                  />
+                  <span class="projects__img-overlay">View Project ↗</span>
+                </a>
+                <div class="projects__box-text">
+                  <h2 class="projects__box-title">Project Name</h2>
+                  <p class="projects__box-description">
+                    Short description of the project, technologies used and what
+                    problem it solves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="projects__box">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="projects__img-link"
+                >
+                  <img
+                    class="projects__img"
+                    src="./public/images.png"
+                    alt="Project 3"
+                  />
+                  <span class="projects__img-overlay">View Project ↗</span>
+                </a>
+                <div class="projects__box-text">
+                  <h2 class="projects__box-title">Project Name</h2>
+                  <p class="projects__box-description">
+                    Short description of the project, technologies used and what
+                    problem it solves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="projects__box">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="projects__img-link"
+                >
+                  <img
+                    class="projects__img"
+                    src="./public/images.png"
+                    alt="Project 4"
+                  />
+                  <span class="projects__img-overlay">View Project ↗</span>
+                </a>
+                <div class="projects__box-text">
+                  <h2 class="projects__box-title">Project Name</h2>
+                  <p class="projects__box-description">
+                    Short description of the project, technologies used and what
+                    problem it solves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="projects__box">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="projects__img-link"
+                >
+                  <img
+                    class="projects__img"
+                    src="./public/images.png"
+                    alt="Project 5"
+                  />
+                  <span class="projects__img-overlay">View Project ↗</span>
+                </a>
+                <div class="projects__box-text">
+                  <h2 class="projects__box-title">Project Name</h2>
+                  <p class="projects__box-description">
+                    Short description of the project, technologies used and what
+                    problem it solves.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__controls">
+            <button
+              class="projects__arrow projects__prev"
+              id="projectsPrev"
+              aria-label="Previous projects"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <div class="projects__dots" id="projectsDots"></div>
+            <button
+              class="projects__arrow projects__next"
+              id="projectsNext"
+              aria-label="Next projects"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2 class="contact__title">Get in Contact</h2>
+        <p class="contact__description">
+          I'm always open to new opportunities, projects, and collaborations. If
+          you have an idea, a proposal, or just want to connect — feel free to
+          reach out.
+        </p>
+
+        <button class="btn contact__btn">Reach Out</button>
+      </section>
+
+      <div
+        id="contactOverlay"
+        class="contact__overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Contact information"
+      >
+        <div class="contact__box">
+          <div class="contact__box-container">
+            <h2 class="contact__box-title">Get in Touch</h2>
+            <button class="contact__box-btn" aria-label="Close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="contact__box-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <p>
+            Email
+            <a href="mailto:rafaelktk2005@hotmail.com" target="_blank"
+              ><strong>rafaelktk2005@hotmail.com</strong></a
+            >
+          </p>
+          <p>
+            Phone
+            <a href="https://wa.me/5543984790465" target="_blank"
+              ><strong>+55 (43) 98479-0465</strong></a
+            >
+          </p>
+          <p>
+            GitHub
+            <a href="https://github.com/kataokadev" target="_blank"
+              ><strong>kataokadev</strong></a
+            >
+          </p>
+          <p>
+            LinkedIn
+            <a
+              href="https://www.linkedin.com/in/rafael-de-morais-kataoka"
+              target="_blank"
+              ><strong>Rafael de Morais Kataoka</strong></a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <h2 class="footer__title">Rafael Kataoka</h2>
+          <p class="footer__subtitle">
+            <strong>Software Engineer</strong> &mdash; Back-end Developer
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <a
+            class="footer__link"
+            href="https://github.com/kataokadev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="footer__link"
+            href="https://www.linkedin.com/in/rafael-de-morais-kataoka"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="footer__link"
+            href="mailto:rafaelktk2005@hotmail.com"
+            aria-label="Email"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.8"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy" id="footerCopy"></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("footerCopy").textContent =
+        "© " +
+        new Date().getFullYear() +
+        " Rafael Kataoka — All rights reserved.";
+    </script>
+  </body>
+</html>
