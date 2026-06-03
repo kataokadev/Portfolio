@@ -20,7 +20,11 @@ function setBoxWidths() {
   const count = getVisibleCount();
   const gapTotal = GAP * (count - 1);
   const boxW = (slider.offsetWidth - gapTotal) / count;
-  boxes.forEach((box) => (box.style.minWidth = `${boxW}px`));
+  boxes.forEach((box) => {
+    box.style.width = `${boxW}px`;
+    box.style.minWidth = `${boxW}px`;
+    box.style.maxWidth = `${boxW}px`;
+  });
 }
 
 function buildDots() {

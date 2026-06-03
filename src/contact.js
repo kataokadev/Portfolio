@@ -17,12 +17,10 @@ function closeModal() {
 contactBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 
-// Fechar clicando no fundo escuro
 overlay.addEventListener("click", (e) => {
   if (e.target === overlay) closeModal();
 });
 
-// Fechar com Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && overlay.classList.contains("open")) closeModal();
 });
