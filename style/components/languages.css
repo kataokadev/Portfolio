@@ -25,12 +25,18 @@
 }
 
 .languages__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
   max-width: 900px;
   padding-inline: 1rem;
+}
+
+.box {
+  flex: 0 0 calc(25% - 0.75rem);
+  min-width: 100px;
 }
 
 .box {
@@ -70,8 +76,11 @@
 
 @media (max-width: 768px) {
   .languages__grid {
-    grid-template-columns: repeat(3, 1fr);
     max-width: 700px;
+  }
+
+  .box {
+    flex: 0 0 calc(33.333% - 0.75rem);
   }
 }
 
@@ -81,17 +90,17 @@
   }
 
   .languages__grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
   }
 
   .box {
+    flex: 0 0 calc(33.333% - 0.6rem);
     padding: 1rem 0.5rem;
   }
 }
 
 @media (max-width: 400px) {
-  .languages__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .box {
+    flex: 0 0 calc(50% - 0.5rem);
   }
 }
